@@ -1,6 +1,6 @@
 # Local UAP Video Index
 
-This folder contains local MP4 downloads from `war.gov/UFO`, grouped by release, plus a generated `index.html` page for browsing, searching & sorting without pagination, or modals.  
+This folder contains a way to view MP4 downloads from `war.gov/UFO` **locally**, grouped by release, with a generated `index.html` page for browsing, searching & sorting without pagination, or annoying modals.  
 
 Clone the repo, download each release into folders (release_01 or release_02) described below, and open index.html in your browser.  
 
