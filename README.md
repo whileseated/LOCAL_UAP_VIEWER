@@ -1,6 +1,6 @@
 # Local UAP Video Index
 
-This folder contains local MP4 downloads from `war.gov/UFO`, grouped by release, plus a generated `index.html` page for browsing, searching & sorting without pagination, or modals.
+This folder contains local MP4 downloads from `war.gov/UFO`, grouped by release, plus a generated `index.html` page for browsing, searching & sorting without pagination, or modals.  
 
 Clone the repo, download each release into folders (release_01 or release_02) described below, and open index.html in your browser.  
 
@@ -21,13 +21,10 @@ uap052226/
     video_2605_DOD_111719709_DOD_111719709.mp4
     video_2605_DOD_111719715_DOD_111719715.mp4
     ...
-  .dvids-cache/
-    DOD_*.html
-    details/
-      *.html
   build_uap_index.py
   index.html
   uap-local-index.json
+  README.md
 ```
 
 For future releases, create the next folder using the same naming pattern:
@@ -45,7 +42,19 @@ Put the downloaded MP4s directly inside that release folder. The filename only n
 
 `uap-local-index.json` is the structured metadata used by the page. It includes the local file path, release, DOD id, title, DVIDS link, War.gov hash link, dates, location, duration, VIRIN, and description.
 
-`.dvids-cache/` stores fetched DVIDS search/detail pages so the index can be regenerated without re-fetching every page each time.
+## Local Metadata Cache
+
+During metadata refreshes, DVIDS HTML pages may be saved under `.dvids-cache/`.
+That folder is a local build cache and does not need to be committed to a public repo. The generated metadata lives in `uap-local-index.json`.
+
+Cache layout, if present:
+
+```text
+.dvids-cache/
+  DOD_*.html
+  details/
+    *.html
+```
 
 ## Regenerating
 
